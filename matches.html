@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Matches - LoveConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .matches-container {
+            padding: 120px 5% 2rem;
+            background-color: var(--light-color);
+            min-height: 100vh;
+        }
+
+        .matches-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .matches-header h1 {
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .matches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .match-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .match-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .match-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .match-info {
+            padding: 1.5rem;
+        }
+
+        .match-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .match-details {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .match-bio {
+            color: #444;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .match-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .match-button:hover {
+            background-color: #ff3358;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: none;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .filter-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .matches-container {
+                padding: 100px 2% 2rem;
+            }
+
+            .matches-grid {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">LoveConnect</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="matches.html" class="active">Matches</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="login.html" class="login-btn">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="matches-container">
+        <div class="matches-header">
+            <h1>Your Matches</h1>
+            <p>Find your perfect match from our curated selections</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Nearby</button>
+            <button class="filter-btn">New</button>
+            <button class="filter-btn">Online</button>
+        </div>
+
+        <div class="matches-grid">
+            <!-- Sample match cards -->
+            <div class="match-card">
+                <img src="https://source.unsplash.com/300x300/?portrait,woman" alt="Sarah" class="match-image">
+                <div class="match-info">
+                    <div class="match-name">Sarah, 28</div>
+                    <div class="match-details">New York, 3 miles away</div>
+                    <p class="match-bio">Adventure seeker, coffee enthusiast, and aspiring photographer. Looking for someone to explore the city with.</p>
+                    <a href="#" class="match-button">View Profile</a>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <img src="https://source.unsplash.com/300x300/?portrait,man" alt="Mike" class="match-image">
+                <div class="match-info">
+                    <div class="match-name">Mike, 32</div>
+                    <div class="match-details">Brooklyn, 5 miles away</div>
+                    <p class="match-bio">Software developer by day, musician by night. Looking for someone who appreciates good music and tech talks.</p>
+                    <a href="#" class="match-button">View Profile</a>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <img src="https://source.unsplash.com/300x300/?portrait,girl" alt="Emma" class="match-image">
+                <div class="match-info">
+                    <div class="match-name">Emma, 26</div>
+                    <div class="match-details">Manhattan, 2 miles away</div>
+                    <p class="match-bio">Yoga instructor and foodie. Seeking someone to share culinary adventures and mindful moments.</p>
+                    <a href="#" class="match-button">View Profile</a>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <img src="https://source.unsplash.com/300x300/?portrait,boy" alt="Alex" class="match-image">
+                <div class="match-info">
+                    <div class="match-name">Alex, 30</div>
+                    <div class="match-details">Queens, 4 miles away</div>
+                    <p class="match-bio">Travel enthusiast and book lover. Looking for a partner in crime for both local and global adventures.</p>
+                    <a href="#" class="match-button">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
